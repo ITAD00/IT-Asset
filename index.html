@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Asset Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>IT Asset Management</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Assets</a></li>
+                <li><a href="#">Add Asset</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Welcome to IT Asset Management</h2>
+            <p>Manage and track your IT assets efficiently.</p>
+        </section>
+        <section id="assets">
+            <h2>Assets List</h2>
+            <div class="export-buttons">
+                <button id="exportPdf">Export to PDF</button>
+                <button id="exportExcel">Export to Excel</button>
+            </div>
+            <table id="assetTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Holder Name</th>
+                        <th>Type</th>
+                        <th>Status</th>
+                        <th>Hostname</th>
+                        <th>Product Brand</th>
+                        <th>Model Number</th>
+                        <th>Serial Number</th>
+                        <th>Purchase Date</th>
+                        <th>Configuration</th>
+                        <th>Warranty</th>
+                        <th>Vendor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Asset rows will be added here by JavaScript -->
+                </tbody>
+            </table>
+            <div class="pagination">
+                <button id="prevPage">Previous</button>
+                <button id="nextPage">Next</button>
+            </div>
+        </section>
+        <section id="addAsset">
+            <h2>Add New Asset</h2>
+            <form id="assetForm">
+                <label for="assetHolderName">Holder Name:</label>
+                <input type="text" id="assetHolderName" name="assetHolderName" required>
+                <label for="assetType">Asset Type:</label>
+                <input type="text" id="assetType" name="assetType" required>
+                <label for="assetStatus">Asset Status:</label>
+                <input type="text" id="assetStatus" name="assetStatus" required>
+                <label for="hostname">Hostname:</label>
+                <input type="text" id="hostname" name="hostname" required>
+                <label for="productBrand">Product Brand:</label>
+                <input type="text" id="productBrand" name="productBrand" required>
+                <label for="modelNumber">Model Number:</label>
+                <input type="text" id="modelNumber" name="modelNumber" required>
+                <label for="serialNumber">Serial Number:</label>
+                <input type="text" id="serialNumber" name="serialNumber" required>
+                <label for="purchaseDate">Purchase Date:</label>
+                <input type="date" id="purchaseDate" name="purchaseDate" required>
+                <label for="os">OS:</label>
+                <input type="text" id="os" name="os" required>
+                <label for="ram">RAM:</label>
+                <input type="text" id="ram" name="ram" required>
+                <label for="storage">Storage:</label>
+                <input type="text" id="storage" name="storage" required>
+                <label for="processor">Processor:</label>
+                <input type="text" id="processor" name="processor" required>
+                <label for="warranty">Warranty:</label>
+                <input type="text" id="warranty" name="warranty" required>
+                <label for="vendor">Vendor:</label>
+                <input type="text" id="vendor" name="vendor" required>
+                <button type="submit">Add Asset</button>
+            </form>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.13/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
